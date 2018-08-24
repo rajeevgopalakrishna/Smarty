@@ -15,12 +15,12 @@ These reports (along with the smart contracts) may be registered on the blockcha
 
 * Clone from github
 * Run `ganache-cli`
-  * Set privateKey in `src/config.js` to private key of 1st account (without the '0x' characters)
-  * Set network in `src/config.js` to "local"
+  * Set `privateKey` in `src/config.js` to private key of 1st account (without the '0x' characters)
+  * Set `network` in `src/config.js` to "local"
 * Run `truffle` compile/migrate/test in `src/ethereum` directory
-  * Set contractAddress in `src/config.js` to the Smarty contract address shown under `2_smarty_migration.js` with `truffle migrate`
+  * Set `contractAddress` in `src/config.js` to the Smarty contract address shown under `2_smarty_migration.js` with `truffle migrate`
 * Run `npm install` in `src` directory. This will install all the Node package dependencies from `package.json`.
-* Run `node src/app.js` in `src` directory. This will start the Smarty server on port 56008.
+* Run `nodejs src/app.js` in `src` directory. This will start the Smarty server on port 56008.
 * From a browser, connect to *localhost:56008*. This will bring up the front-end interface.
 
 
