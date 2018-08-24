@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smarty</title>
+  </head>
+  <h1>Smarty Dashboard</h1>
+  <body>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"><br>
+    <button id="uploadContract">Upload Contract</button>
+  </body>
+  <body>
+    <button id="getRecords">Get User Records</button>
+    <button id="goHome">Home</button>
+    <table id="records">
+      <thead>
+	<tr>
+	  <th width="150">Record</th>
+	  <th width="150">Contract IPFS</th>
+	  <th width="150">Contract Audit IPFS</th>
+	</tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  <div class="log"></div>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+    $('button#goHome').on('click',function(){
+     window.location = "/";
+    });
+    
+    $('button#uploadContract').on('click',function(){
+      var data = {
+       username: $('#username').val(),
+      };
+    
+      $.post("/user", data, function(data) {
+         console.log(data);
+         document.write(data);
+      });
+    });
+   
+    
+    $('button#getRecords').on('click',function(){
+
+    $("#records tbody tr").remove();
+    
+    function getData() {
+      var data = {
+       username: $('#username').val(),
+      };   
+      $.post('/getUserRecords/', data, function(data,fields) {
+        var rows = JSON.parse(data);
+        for (i=0 ; i < rows.length ; i++){
+		   var row = rows[i];
+		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td></tr>');
+	}
+      });
+    }
+
+    function updateData() {
+      var data = {
+       username: $('#username').val(),
+      };		       
+      $.post('/updateUserRecords/', data, function(data,fields) {
+        var rows = JSON.parse(data);
+        for (i=0 ; i < rows.length ; i++){
+		   var row = rows[i];
+		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td></tr>');
+	}
+      });
+    }
+
+     getData();
+		       
+     (function myLoop (i) {
+		   setTimeout(function () {
+		   updateData();
+		   if (--i) {
+		     myLoop(i);      //  decrement i and call myLoop again if i > 0
+                   }
+      }, 5000)
+      })(10); 
+
+      });
+      
+     });
+      
+  </script>  
+ </body>
+</html>
