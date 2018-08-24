@@ -20,7 +20,7 @@ These reports (along with the smart contracts) may be registered on the blockcha
 * Run `truffle` compile/migrate/test in `src/ethereum` directory
   * Set `contractAddress` in `src/config.js` to the Smarty contract address shown under `2_smarty_migration.js` with `truffle migrate`
 * Run `npm install` in `src` directory. This will install all the Node package dependencies from `package.json`.
-* Run `nodejs src/app.js` in `src` directory. This will start the Smarty server on port 56008.
+* Run `nodejs src/app.js` in Smarty directory. This will start the Smarty server on port 56008.
 * From a browser, connect to *localhost:56008*. This will bring up the front-end interface.
 
 
