@@ -6,7 +6,7 @@ There are many security tools being developed for analysing smart contracts writ
 
 These reports (along with the smart contracts) may be registered on the blockchain with a timestamp for the user/developer to prove that they have used this service and are aware of the security vulnerabilities (or lack thereof) as indicated in the reports. Such proofs-of-audit vindicate the user or developer against any potential future claims of having interacted with or deployed smart contracts with known vulnerabilities.
 
-Note: This is an initial prototype which is a work-in-progress still under development. It has been minimally tested and is not to be used in production.
+*Note: This is an initial prototype which is a work-in-progress still under development. It has been minimally tested and is not to be used in production.*
 
 **Technical Stack**
 
