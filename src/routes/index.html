@@ -15,9 +15,10 @@
     <table id="records">
       <thead>
 	<tr>
-	  <th width="150">Record</th>
+	  <th width="50">Record</th>
 	  <th width="150">Contract IPFS</th>
 	  <th width="150">Contract Audit IPFS</th>
+	  <th width="50">Timestamp</th>
 	</tr>
       </thead>
       <tbody>
@@ -56,7 +57,7 @@
         var rows = JSON.parse(data);
         for (i=0 ; i < rows.length ; i++){
 		   var row = rows[i];
-		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td></tr>');
+		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td><td>'+'</td><td>'+row.timestamp+'</td></tr>');
 	}
       });
     }
@@ -69,7 +70,7 @@
         var rows = JSON.parse(data);
         for (i=0 ; i < rows.length ; i++){
 		   var row = rows[i];
-		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td></tr>');
+		       $('#records tbody').append('<tr><td>'+row.recordID+'</td><td>'+row.contract+'</td><td>'+row.audit+'</td><td>'+'</td><td>'+row.timestamp+'</td></tr>');
 	}
       });
     }

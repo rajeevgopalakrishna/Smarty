@@ -282,7 +282,7 @@ function getUserRecordFromSmartContract(username, got_nonce, index) {
 		console.log("Event: " + data);
 		// Do something with the data. Depends on the log and what you're using the data for.
 		var row = String(data).split(",");
-		module.exports.rows.push({recordID: row[1], contract: row[2], audit: row[3]});
+		module.exports.rows.push({recordID: row[1], contract: row[2], audit: row[3], timestamp: row[4]});
 	    }
 	    else {
 		console.log("Event is null!");
