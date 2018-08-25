@@ -9,7 +9,6 @@ The contract is locked using *pragma solidity ^0.4.24;* as per guidelines from h
 The *emit* keyword is used to generate events and allow us to differentiate events from function calls as per guidelines from https://consensys.github.io/smart-contract-best-practices/recommendations/#differentiate-functions-and-events and https://blog.indorse.io/security-best-practises-for-smart-contract-programming-in-solidity-part-2-state-of-the-b558798181ca
 
 * Explicitly mark visibility in functions and state variables
-The visibility of functions is explicitly marked as per guidelines from https://consensys.github.io/smart-contract-best-practices/recommendations/#explicitly-mark-visibility-in-functions-and-state-variables and https://blog.indorse.io/security-best-practises-for-smart-contract-pro\
-gramming-in-solidity-part-2-state-of-the-b558798181ca
+The visibility of functions is explicitly marked as per guidelines from https://consensys.github.io/smart-contract-best-practices/recommendations/#explicitly-mark-visibility-in-functions-and-state-variables and https://blog.indorse.io/security-best-practises-for-smart-contract-programming-in-solidity-part-2-state-of-the-b558798181ca
 
 
